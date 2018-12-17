@@ -32,17 +32,17 @@ namespace SWK5.WETR.DataLayer {
         #endregion
 
         #region unitOfMeasurement
-        ICollection<UnitOfMeasurement> getAllUnitOfMeanurements();
-        UnitOfMeasurement getUnitOfMeanurementById(int id);
-        void addUnitOfMeanurement(UnitOfMeasurement unit);
-        void updateUnitOfMeanurement(UnitOfMeasurement unit);
-        void deleteUnitOfMeanurement(UnitOfMeasurement unit);
+        ICollection<UnitOfMeasurement> getAllUnitOfMeasurements();
+        UnitOfMeasurement getUnitOfMeasurementById(int id);
+        void addUnitOfMeasurement(UnitOfMeasurement unit);
+        void updateUnitOfMeasurement(UnitOfMeasurement unit);
+        void deleteUnitOfMeasurement(UnitOfMeasurement unit);
         #endregion
 
         #region measurement
         ICollection<Measurement> getAllMeasurements();
         Measurement getMeasurementById(int id);
-        Measurement getMeasurementByUnit(UnitOfMeasurement unit);
+        ICollection<Measurement> getMeasurementsByUnit(UnitOfMeasurement unit);
         ICollection<Measurement> getMeasurementsBetween(DateTime startTime, DateTime endTime);
         void addMeasurement(Measurement measurement);
         void updateMeasurement(Measurement measurement);
