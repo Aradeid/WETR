@@ -9,19 +9,19 @@ namespace SWK5.WETR.Entities
     public class BaseEntity
     {
         // all attributes for all entities/classes are private in this version, as it is unknown at this point whether a different approach is needed
-        private int id { get; } // internal database id given to every entity; -1 if not in database
+        public int Id { get; } // internal database id given to every entity; -1 if not in database
 
         public BaseEntity(int id)
         {
-            this.id = id;
+            this.Id = id;
         }
         public override string ToString()
         {
-            return "id[" + ((id == -1) ? "NO DATABASE ID" : id.ToString()) + "]";
+            return "Id[" + ((Id == -1) ? "NO DATABASE ID" : Id.ToString()) + "]";
         }
 		public bool Equals(BaseEntity e) {
-			return (this.id != -1) && (e.id != -1) // is not part of database
-				&& (this.id == e.id);
+			return (this.Id != -1) && (e.Id != -1) // is not part of database
+				&& (this.Id == e.Id);
 		}
 	}
 }

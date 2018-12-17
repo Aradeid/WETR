@@ -8,17 +8,17 @@ namespace SWK5.WETR.Entities
 {
     public class UnitOfMeasurement : BaseEntity // class might be deleted later, as it seems to only be needed internally
     {
-        private string unit { get; }
-        private string description { get; }
+        public string Unit { get; }
+        public string Description { get; }
         public UnitOfMeasurement(string unit, string description, int id = -1) : base(id)
         {
-            this.unit = unit;
-            this.description = description;
+            this.Unit = unit;
+            this.Description = description;
         }
 		public override string ToString() {
 			return base.ToString()
-				+ ", unit[" + unit + "]"
-                + ", description[" + description + "]"
+				+ ", Unit[" + Unit + "]"
+                + ", Description[" + Description + "]"
                 ;
 		}
 	}

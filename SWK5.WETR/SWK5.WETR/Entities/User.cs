@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace SWK5.WETR.Entities {
 	public class User : BaseEntity {
-		private string name { get; }
+		public string Name { get; }
 		// private string passHash { get; } // likely shouldn't exist here
-		private int privilegeId { get; } // FK on Privilege
-		private int stationId { get; } // FK on Station
+		public int PrivilegeId { get; } // FK on Privilege
+		public int StationId { get; } // FK on Station
 		public User(string name, int privilegeId, int stationId, int id = -1) : base(id) {
-			this.name = name;
-			this.privilegeId = privilegeId;
-			this.stationId = stationId;
+			this.Name = name;
+			this.PrivilegeId = privilegeId;
+			this.StationId = stationId;
 		}
 		public override string ToString() {
 			return base.ToString()
-				+ ", name[" + name + "]"
+				+ ", Name[" + Name + "]"
 				//+ ", passHash[" + passHash + "]"
-				+ ", privilegeId[" + privilegeId + "]"
-				+ ", stationId[" + stationId + "]"
+				+ ", PrivilegeId[" + PrivilegeId + "]"
+				+ ", StationId[" + StationId + "]"
 				;
 		}
 	}

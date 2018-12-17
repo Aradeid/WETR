@@ -8,14 +8,14 @@ namespace SWK5.WETR.Entities
 {
     public class Region : BaseEntity
     {
-        protected string name { get; }
+        protected string Name { get; }
         public Region(string name, int id = -1) : base(id)
         {
-            this.name = name;
+            this.Name = name;
         }
 		public override string ToString() {
 			return base.ToString()
-				+ ", name[" + name + "]"
+				+ ", Name[" + Name + "]"
 				;
 		}
 	}

@@ -8,23 +8,23 @@ namespace SWK5.WETR.Entities
 {
     public class Measurement : BaseEntity
     {
-        private double value { get; } // measured in measurementUnit
-        private double measurementUnitId { get; } // FK on UnitOfMeasurement
-        private DateTime timeStamp { get; }
-        private double stationId { get; } // FK on Station
+        public double Value { get; } // measured in measurementUnit
+        public double MeasurementUnitId { get; } // FK on UnitOfMeasurement
+        public DateTime TimeStamp { get; }
+        public double StationId { get; } // FK on Station
         public Measurement(double value, double measurementUnitId, DateTime timeStamp, double stationId, int id = -1) : base(id)
         {
-            this.value = value;
-            this.measurementUnitId = measurementUnitId;
-            this.timeStamp = timeStamp;
-            this.stationId = stationId;
+            this.Value = value;
+            this.MeasurementUnitId = measurementUnitId;
+            this.TimeStamp = timeStamp;
+            this.StationId = stationId;
         }
 		public override string ToString() {
 			return base.ToString()
-				+ ", value[" + value + "]"
-				+ ", measurementUnitId[" + measurementUnitId + "]"
-				+ ", timeStamp[" + timeStamp + "]"
-				+ ", stationId[" + stationId + "]"
+				+ ", Value[" + Value + "]"
+				+ ", MeasurementUnitId[" + MeasurementUnitId + "]"
+				+ ", TimeStamp[" + TimeStamp + "]"
+				+ ", StationId[" + StationId + "]"
 				;
 		}
 	}
