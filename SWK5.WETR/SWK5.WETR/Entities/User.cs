@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace SWK5.WETR.Entities {
 	public class User : BaseEntity {
-		public string Name { get; }
+		public string Name { get; set; }
 		// private string passHash { get; } // likely shouldn't exist here
-		public int PrivilegeId { get; } // FK on Privilege
-		public int StationId { get; } // FK on Station
+		public int PrivilegeId { get; set; } // FK on Privilege
+		public int StationId { get; set; } // FK on Station
 		public User(string name, int privilegeId, int stationId, int id = -1) : base(id) {
 			this.Name = name;
 			this.PrivilegeId = privilegeId;

@@ -8,9 +8,9 @@ namespace SWK5.WETR.Entities
 {
     public class Station : BaseEntity
     {
-        public string Name { get; }
-        public string Type { get; }
-        public int LocationId { get; } // may be replaced with actual location in the future
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public int LocationId { get; set; } // may be replaced with actual location in the future
         public Station(string name, string type, int locationId, int id = -1) : base(id)
         {
             this.Name = name;

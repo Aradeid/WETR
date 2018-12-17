@@ -9,7 +9,7 @@ namespace SWK5.WETR.Entities
     public class BaseEntity
     {
         // all attributes for all entities/classes are private in this version, as it is unknown at this point whether a different approach is needed
-        public int Id { get; } // internal database id given to every entity; -1 if not in database
+        public int Id { get; set; } // internal database id given to every entity; -1 if not in database
 
         public BaseEntity(int id)
         {

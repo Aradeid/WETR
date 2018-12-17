@@ -8,10 +8,10 @@ namespace SWK5.WETR.Entities
 {
     public class Location : BaseEntity
     {
-        public string Address { get; }
-        public string Zip { get; }
-        public double Longitude { get; }
-        public int Latitude { get; }
+        public string Address { get; set; }
+        public string Zip { get; set; }
+        public double Longitude { get; set; }
+        public int Latitude { get; set; }
         public Location(string address, string zip, double longitude, int latitude, int id = -1) : base(id)
         {
             this.Address = address;

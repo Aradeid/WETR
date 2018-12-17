@@ -8,7 +8,7 @@ namespace SWK5.WETR.Entities
 {
     public class Region : BaseEntity
     {
-        protected string Name { get; }
+        protected string Name { get; set; }
         public Region(string name, int id = -1) : base(id)
         {
             this.Name = name;
