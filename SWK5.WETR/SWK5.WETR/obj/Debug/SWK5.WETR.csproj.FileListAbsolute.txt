@@ -1,0 +1,7 @@
+C:\Users\Mihail\Documents\FHHGB\SWK5\Abgabe01\SWK5.WETR\SWK5.WETR\bin\Debug\SWK5.WETR.exe.config
+C:\Users\Mihail\Documents\FHHGB\SWK5\Abgabe01\SWK5.WETR\SWK5.WETR\bin\Debug\SWK5.WETR.exe
+C:\Users\Mihail\Documents\FHHGB\SWK5\Abgabe01\SWK5.WETR\SWK5.WETR\bin\Debug\SWK5.WETR.pdb
+C:\Users\Mihail\Documents\FHHGB\SWK5\Abgabe01\SWK5.WETR\SWK5.WETR\obj\Debug\SWK5.WETR.csprojAssemblyReference.cache
+C:\Users\Mihail\Documents\FHHGB\SWK5\Abgabe01\SWK5.WETR\SWK5.WETR\obj\Debug\SWK5.WETR.csproj.CoreCompileInputs.cache
+C:\Users\Mihail\Documents\FHHGB\SWK5\Abgabe01\SWK5.WETR\SWK5.WETR\obj\Debug\SWK5.WETR.exe
+C:\Users\Mihail\Documents\FHHGB\SWK5\Abgabe01\SWK5.WETR\SWK5.WETR\obj\Debug\SWK5.WETR.pdb

@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWK5.WETR", "SWK5.WETR\SWK5.WETR.csproj", "{A92EA15E-0D55-4E0C-8404-47DDE8F9EA17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWK5.Simulator", "SWK5.Simulator\SWK5.Simulator.csproj", "{F60FDDC4-9231-464D-8CCE-E2A149CE77CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A92EA15E-0D55-4E0C-8404-47DDE8F9EA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A92EA15E-0D55-4E0C-8404-47DDE8F9EA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A92EA15E-0D55-4E0C-8404-47DDE8F9EA17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F60FDDC4-9231-464D-8CCE-E2A149CE77CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F60FDDC4-9231-464D-8CCE-E2A149CE77CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F60FDDC4-9231-464D-8CCE-E2A149CE77CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F60FDDC4-9231-464D-8CCE-E2A149CE77CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

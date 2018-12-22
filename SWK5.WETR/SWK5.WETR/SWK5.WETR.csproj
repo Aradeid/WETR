@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataLayer\IDataLayer.cs" />
+    <Compile Include="DataLayer\MockDataLayer.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\Measurement.cs" />
     <Compile Include="Entities\Privilege.cs" />
@@ -60,5 +62,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
