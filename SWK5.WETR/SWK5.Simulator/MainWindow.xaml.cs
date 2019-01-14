@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using LiveCharts;
+using LiveCharts.Wpf;
 
 namespace SWK5.Simulator
 {
@@ -20,27 +12,53 @@ namespace SWK5.Simulator
     /// </summary>
     public partial class MainWindow : Window
     {
-        TemperatureViewModel tvm = new TemperatureViewModel();
+        ChartValues<double> vs;
+        RandomTemperatureGenerator generator;
+        bool running = false;
 
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new TemperatureViewModel();
+
+            vs = new ChartValues<double>();
+            generator = new RandomTemperatureGenerator(vs, 1000); // 1000 should come from an edit and be parsed on 'Start'
+
+            SeriesCollection = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Title = "Temperature",
+                    Values = vs,
+                    LineSmoothness = 0, //0 == straight lines
+                    PointGeometry = DefaultGeometries.Circle,
+                    PointGeometrySize = 10,
+                    PointForeground = Brushes.Gray
+                }
+            };
+
+            // Labels = new[] { };
+            YFormatter = value => value.ToString();
+            DataContext = this;
         }
 
-        private void ReadButton_Click(object sender, RoutedEventArgs e)
-        {
-            tvm.ReadCommand();
-        }
+        public SeriesCollection SeriesCollection { get; set; }
+        //public string[] Labels { get; set; }
+        public Func<double, string> YFormatter { get; set; }
 
-        private void StopButton_Click(object sender, RoutedEventArgs e)
+        private void modeBtn_Click(object sender, RoutedEventArgs e)
         {
-            tvm.StopCommand();
-        }
-
-        private void ClearButton_Click(object sender, RoutedEventArgs e)
-        {
-            tvm.ClearCommand();
+            if (running)
+            {
+                generator.Stop();
+                running = false;
+                // modeBtn.text = "Start";
+            }
+            else
+            {
+                generator.Start();
+                running = true;
+                // modeBtn.text = "Stop";
+            }
         }
     }
 }
